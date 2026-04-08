@@ -1,6 +1,9 @@
 // bono por resultados por porcentaje
+
 object bonoPorcentaje {
-	method monto(empleado) { return empleado.sueldoNeto() * 10 / 100 }
+	method monto(empleado) { 
+		return empleado.sueldoNeto() * 10 / 100 
+		}
 }
 
 // bono por resultados de monto fijo

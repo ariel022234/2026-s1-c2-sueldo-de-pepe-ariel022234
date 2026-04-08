@@ -9,6 +9,7 @@ object sofia {
 	method cantidadDeFaltas() { 
 		return cantidadDeFaltas 
 		}
+    
 
 	method setCantidadDeFaltas(faltas) {
 	  cantidadDeFaltas = cantidadDeFaltas + faltas
