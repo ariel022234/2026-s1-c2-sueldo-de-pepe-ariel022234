@@ -1,9 +1,8 @@
 import categorias.*
 import bonos.*
 
-object pepe {
-	var categoria = gerente
-	var bonoPresentismo = bonoNulo
+object sofia {
+    var categoria = gerente
 	var bonoResultado = bonoNulo
 	var cantidadDeFaltas = 0
 	
@@ -19,9 +18,7 @@ object pepe {
 	method setCategoria(nuevaCategoria) {
 		categoria = nuevaCategoria
 	}
-	method setBonoPresentismo(nuevoBono) {
-	  bonoPresentismo = nuevoBono
-	}
+
 	method setBonoResultado(nuevoBono) {
 	  bonoResultado = nuevoBono
 	}
@@ -30,16 +27,10 @@ object pepe {
 	// el bono por resultados y la cantidad de faltas de Pepe. 
 	
 	method sueldoNeto() { 
-		return categoria.neto() 
+		return categoria.neto() * 1.3
 		}
 	method sueldo() {
-		return self.sueldoNeto() + bonoPresentismo.monto(pepe) + bonoResultado.monto(pepe)
-			/* + el bono por presentismo */
-			/* + el bono por resultado */
+		return self.sueldoNeto() + bonoResultado.monto(sofia)
 		
-		/* notar que todos los bonos entienden el mensaje monto(empleado)
-		 * en este caso ¿quién es el empleado?
-		 */ 
 	}
-	
 }
